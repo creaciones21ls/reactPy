@@ -27,8 +27,8 @@ const Home = () => {
 
     return (
         <>
-            <header className="home">
-                <div className="enlaces">
+            <header className="container">
+                <div className="client-list">
                     <Form id="search-form" role="search">
                         <input
                             id="q"
@@ -42,9 +42,9 @@ const Home = () => {
                         <div className="sr-only" aria-live="polite"></div>
                     </Form>
                     <div className="navbar">
-                        <Link to="/" className="botonCitas" >Home</Link>
+                        <Link to="/" className="navbar-boton" >Home</Link>
                         <Form method="post">
-                            <button className="botonCitas" type="submit">New Client</button>
+                            <button className="navbar-boton" type="submit">New Client</button>
                         </Form>
                     </div>
                     <nav>
@@ -65,7 +65,7 @@ const Home = () => {
                     </nav>
                     <Link to="/lista" className="list-link">Lista</Link>
                 </div>
-                <section className="requisitos-form"><Outlet /></section>
+                <section className="formulario-req-form"><Outlet /></section>
             </header>
             <Footer />
         </>

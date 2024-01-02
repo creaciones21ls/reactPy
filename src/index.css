@@ -30,27 +30,24 @@ body {
     font-size: 63.3%;
     background: var(--verde-claro);
     font-family: 'Roboto Mono', sans-serif;
+    box-sizing: border-box;
 
+}
+
+.container {
+    font-size: 1.7em;
+    color: var(--marron-claro);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .navbar {
     display: flex;
 }
 
-.navbar a {
-
-    display: flex;
-    align-items: center;
-}
-
-.requisitosMin {
-    margin: 40px auto;
-
-}
-
-.botonCitas {
-    font-size: 2em;
-    margin: 30px;
+.navbar-boton {
+    font-size: 1.7em;
+    margin: 20px;
     border: none;
     background-color: var(--marron-claro);
     color: var(--rojo-brillante);
@@ -58,6 +55,11 @@ body {
     cursor: pointer;
     padding: 10px;
     text-decoration: none;
+}
+
+.requisitosMin {
+    margin: 40px auto;
+
 }
 
 
@@ -77,14 +79,7 @@ body {
     font-weight: bolder;
 }
 
-.home {
-    font-size: 2em;
-    color: var(--marron-claro);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.enlaces {
+.client-list {
 
     display: flex;
     flex-direction: column;
@@ -93,22 +88,56 @@ body {
     margin-top: 30px;
 }
 
+.client-list a {
 
-.requisitos-form {
+    text-decoration: none;
+
+
+}
+
+
+.client-list .list-link {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: black;
+}
+
+.client-list .list-link:hover {
+
+    color: var(--verde-oscuro);
+}
+
+.client-list nav a {
+    text-decoration: none;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    color: inherit;
+    width: 70%;
+}
+
+
+.client-list nav .active {
+    color: var(--azul-brillante)
+}
+
+.formulario-req-form {
     grid-column: 2/4;
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     min-height: 100vh;
+
 }
 
 .formulario {
     transform: scale(1.1, 1.1);
     border: var(--verde-oscuro) 2px solid;
-    width: 60%;
+    width: 90%;
     font-size: 1.3em;
     font-weight: bold;
     margin: auto;
+
 }
 
 
@@ -117,7 +146,7 @@ body {
     display: flex;
     flex-direction: column;
     color: var(--violeta-oscuro);
-    gap: 5px;
+    gap: 4px;
 }
 
 .formulario form label {
@@ -157,34 +186,19 @@ body {
 }
 
 
+.table-list thead {
+    background-color: var(--marron-claro);
+    color: white;
+}
+
+.table-list tbody tr:hover {
+    background-color: var(--verde-oscuro);
+}
+
+
 .table-list th,
 td {
-    border: var(--plomo-gris) 1px solid;
-}
-
-.enlaces .list-link {
-    text-decoration: none;
-    font-size: 1.1em;
-    color: black;
-}
-
-.enlaces .list-link:hover {
-
-    color: var(--verde-oscuro);
-}
-
-.enlaces nav a {
-    text-decoration: none;
-    font-size: 1.5em;
-    border: none;
-    border-radius: 10px;
-    color: inherit;
-    width: 70%;
-}
-
-
-.enlaces nav .active {
-    color: var(--azul-brillante)
+    border: var(--plomo-gris) 2px solid;
 }
 
 #zero-state {
@@ -205,4 +219,121 @@ td {
     display: block;
     margin-bottom: 0.5rem;
     content: url("https://media1.giphy.com/media/KyBX9ektgXWve/giphy.webp?cid=ecf05e47tcs673w369pkybpnpw2haht6xkhxmqeo22ennveg&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+}
+
+/** MEDIAQUERY */
+
+@media screen and (max-width: 1000px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        font-size: 0.8em;
+    }
+
+    .client-list {
+
+        font-size: 0.9em;
+    }
+
+    .formulario-req-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+
+    }
+
+    .formulario input {
+        transform: scale(1, 1);
+        width: 70%;
+    }
+
+    .formulario-req-form input {
+
+        min-width: 1%;
+
+    }
+
+    .requisitosMin {
+
+        font-size: 0.9em;
+    }
+
+    .table-list {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 760px) {
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario input {
+
+        display: flex;
+        width: auto;
+    }
+
+    .requisitosMin {
+
+        font-size: 0.7em;
+        text-align: center;
+
+    }
+
+    .formulario button {
+        width: auto;
+    }
+
+    .formulario input {
+        transform: scale(1, 1);
+        width: 80%;
+    }
+
+    .formulario button {
+        width: auto;
+    }
+
+
+}
+
+
+@media screen and (max-width: 570px) {
+
+    .container {
+        width: 100%;
+
+    }
+
+    .requisitosMin {
+
+        font-size: 0.5em;
+    }
+
+    .requisitosMin li {
+
+        list-style: none;
+    }
+
+    .formulario button {
+        width: auto;
+    }
+
+    .formulario input {
+        transform: scale(1, 1);
+        width: 90%;
+    }
+
+
 }
