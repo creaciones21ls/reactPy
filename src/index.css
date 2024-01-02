@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+:root {
+    --plomo-claro: hsl(210, 9%, 70%);
+    --rojo-claro: hsl(6, 78%, 57%);
+    --verde-claro: hsl(145, 61%, 90%);
+    --verde-oscuro: hsl(168, 76%, 23%);
+    --celeste: hsl(199, 92%, 56%);
+    --anaranjado: hsl(14, 100%, 57%);
+    --marron-claro: hsl(15, 15%, 69%);
+    --blanco-plomo: hsl(0, 0%, 93%);
+    --plomo-gris: hsl(0, 0%, 26%);
+    --amarillo-brillante: hsl(75, 100%, 60%);
+    --naranja-brillante: hsl(40, 100%, 70%);
+    --rojo-brillante: hsl(0, 100%, 50%);
+    --verde-brillante: hsl(60, 100%, 30%);
+    --verde-claro-brillante: hsl(160, 100%, 70%);
+    --verde-brillante-oscuro: hsl(108, 100%, 50%);
+    --azul-brillante: hsl(240, 100%, 40%);
+    --violeta-oscuro: hsl(270, 100%, 20%);
+
+}
+
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-size: 63.3%;
+    background: var(--verde-claro);
+    font-family: 'Roboto Mono', sans-serif;
+
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+
+    display: flex;
+    align-items: center;
+}
+
+.requisitosMin {
+    margin: 40px auto;
+
+}
+
+.botonCitas {
+    font-size: 2em;
+    margin: 30px;
+    border: none;
+    background-color: var(--marron-claro);
+    color: var(--rojo-brillante);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+.invalid {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.valid {
+    color: #5cb85c;
+    font-weight: bold;
+}
+
+.valid:after {
+    padding-left: 25px;
+    content: '\2713';
+    font-weight: bolder;
+}
+
+.home {
+    font-size: 2em;
+    color: var(--marron-claro);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.enlaces {
+
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/2;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.requisitos-form {
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    min-height: 100vh;
+}
+
+.formulario {
+    transform: scale(1.1, 1.1);
+    border: var(--verde-oscuro) 2px solid;
+    width: 60%;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: auto;
+}
+
+
+.formulario form {
+
+    display: flex;
+    flex-direction: column;
+    color: var(--violeta-oscuro);
+    gap: 5px;
+}
+
+.formulario form label {
+    text-align: center;
+}
+
+.formulario input {
+    margin-bottom: 10px;
+    border: var(--violeta-oscuro) 2px solid;
+    border-radius: 5px;
+    height: 40px;
+    width: 50%;
+    display: block;
+    margin: auto;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 0.7em;
+
+}
+
+.formulario button {
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+    background: var(--azul-brillante);
+    color: white;
+    opacity: 0.4;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
+    margin: 30px auto;
+}
+
+.table-list {
+    font-size: 1.5em;
+    margin: 70px auto;
+    text-align: center;
+}
+
+
+.table-list th,
+td {
+    border: var(--plomo-gris) 1px solid;
+}
+
+.enlaces .list-link {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: black;
+}
+
+.enlaces .list-link:hover {
+
+    color: var(--verde-oscuro);
+}
+
+.enlaces nav a {
+    text-decoration: none;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    color: inherit;
+    width: 70%;
+}
+
+
+.enlaces nav .active {
+    color: var(--azul-brillante)
+}
+
+#zero-state {
+    margin: 2rem auto;
+    text-align: center;
+    color: #818181;
+}
+
+#zero-state a {
+    color: inherit;
+}
+
+#zero-state a:hover {
+    color: #121212;
+}
+
+#zero-state:before {
+    display: block;
+    margin-bottom: 0.5rem;
+    content: url("https://media1.giphy.com/media/KyBX9ektgXWve/giphy.webp?cid=ecf05e47tcs673w369pkybpnpw2haht6xkhxmqeo22ennveg&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+}
