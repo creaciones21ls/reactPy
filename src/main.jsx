@@ -15,26 +15,10 @@ const router = createBrowserRouter([
     action: rootAction,
     loader: rootLoaderHome,
     children: [
-      {
-        index: true,
-        element: <Index />,
-      },
-      {
-
-        path: "form/:formID",
-        element: <Formulario />,
-        action: formAction,
-
-      },
-      {
-        path: "form/:formID/destroy",
-        action: destroyAction,
-      },
-      {
-        path: "lista",
-        element: <Lista />,
-        loader: rootLoader,
-      }
+      { index: true, element: <Index />, },
+      { path: "form/:formID", element: <Formulario />, action: formAction, },
+      { path: "form/:formID/destroy", action: destroyAction, },
+      { path: "lista", element: <Lista />, loader: rootLoader, }
     ],
   }
 ])
