@@ -34,7 +34,7 @@ const Lista = () => {
                                     <td>{contact.hora}</td>
                                 </tr>
                             )
-                            : <p>No List</p>
+                            : <tr><td>No List</td></tr>
                     }
                 </tbody>
             </table>

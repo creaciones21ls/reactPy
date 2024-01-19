@@ -221,6 +221,19 @@ td {
     content: url("https://media1.giphy.com/media/KyBX9ektgXWve/giphy.webp?cid=ecf05e47tcs673w369pkybpnpw2haht6xkhxmqeo22ennveg&ep=v1_gifs_search&rid=giphy.webp&ct=g");
 }
 
+.login-form {
+
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.login-form input,
+button {
+    padding: 5px;
+    text-align: center;
+}
+
 /** MEDIAQUERY */
 
 @media screen and (max-width: 1000px) {
