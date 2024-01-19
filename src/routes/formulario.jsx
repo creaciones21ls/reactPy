@@ -37,6 +37,7 @@ const Formulario = () => {
     const checkInput = (e) => {
         let letras = /[A-Za-z]/;
 
+        // Condicion#1 mayor a 2 caracteres
         if (e.target.value.length > 1) {
             setIsCompleteName(true)
         }
@@ -79,6 +80,8 @@ const Formulario = () => {
                     <input type="text" id="nombre" name='nombre' placeholder='Ingresa nombre' onChange={checkInput} />
                     <label htmlFor="apellido">Apellido</label>
                     <input type="text" name='apellido' id="apellido" placeholder='Ingresa apellido' onChange={checkInput} />
+                    <label htmlFor="servicio">Servicio</label>
+                    <input type="text" name='servicio' id="servicio" placeholder='Ingresa el servicio' onChange={checkInput} />
                     <label htmlFor="telefono">Teléfono</label>
                     <input type="text" name='telefono' id="telefono" placeholder='Ingresa teléfono' onChange={checkTelf} />
                     <label htmlFor="fecha">Fecha de Cita</label>

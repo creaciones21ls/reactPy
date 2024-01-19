@@ -17,6 +17,7 @@ const Lista = () => {
                     <tr>
                         <th>Nombre</th>
                         <th>Apellido</th>
+                        <th>Servicio</th>
                         <th>Teléfono</th>
                         <th>Fecha de Cita</th>
                         <th>Hora</th>
@@ -29,6 +30,7 @@ const Lista = () => {
                                 <tr key={contact.id}>
                                     <td>{contact.nombre}</td>
                                     <td>{contact.apellido}</td>
+                                    <td>{contact.servicio}</td>
                                     <td>{contact.telefono}</td>
                                     <td>{contact.fecha}</td>
                                     <td>{contact.hora}</td>
